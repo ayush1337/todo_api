@@ -2,8 +2,7 @@ import mysql from 'mysql';
 import dotenv from 'dotenv';
 import fs from 'fs';
 dotenv.config();
-const serviceUri =
-  'mysql://avnadmin:AVNS_oAdoVrjlIJ8Yc5peJhX@mysql-fbdc2da-infynect.a.aivencloud.com:19331/todo?ssl-mode=REQUIRED';
+const serviceUri = process.env.DB_URL;
 const url = new URL(serviceUri);
 const host = url.hostname;
 const port = url.port;
